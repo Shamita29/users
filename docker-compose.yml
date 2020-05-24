@@ -1,0 +1,13 @@
+version: '2.0'
+
+services:
+  web:
+    container_name: users
+    build: .
+    image: users:latest
+    command: python3 users.py
+    restart: always
+    environment:
+    - TEAM_NAME=CC_1531_2371_2414
+    ports:
+      - "8000:80"
